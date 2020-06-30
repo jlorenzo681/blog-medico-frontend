@@ -1,8 +1,13 @@
 import React from "react"
-import { graphql } from "gatsby"
+import {graphql} from "gatsby"
 
 import ArticlesComponent from "../components/articles"
 import Layout from "../components/layout"
+import LeftMenu from "../components/leftMenu"
+
+const blogContentStyle = {
+  width: '70%'
+};
 
 export const query = graphql`
   query Category($id: Int!) {
@@ -26,17 +31,22 @@ export const query = graphql`
   }
 `
 
-const Category = ({ data }) => {
+const Category = ({data}) => {
   const articles = data.articles.edges
   const category = data.category.name
   
   return (
     <Layout>
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
-          <h1>{category}</h1>
-          <ArticlesComponent articles={articles} />
-        </div>
+      <div className="">
+        <LeftMenu/>
+        <section className="section hero">
+          <div className="hero-body">
+            <div className="" style={blogContentStyle}>
+              <h1>{category}</h1>
+              <ArticlesComponent articles={articles}/>
+            </div>
+          </div>
+        </section>
       </div>
     </Layout>
   )

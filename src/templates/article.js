@@ -5,6 +5,11 @@ import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 
 import Layout from "../components/layout"
+import LeftMenu from "../components/leftMenu"
+
+const blogContentStyle = {
+  width: '70%'
+};
 
 export const query = graphql`
   query ArticleQuery($id: Int!) {
@@ -24,12 +29,11 @@ const Article = ({data}) => {
   const article = data.strapiArticle
   return (
     <Layout>
-      <div>
-
+      <LeftMenu/>
+      <div className="" style={blogContentStyle}>
           <h1>{article.title}</h1>
-        
-        <div className="uk-section">
-          <div className="uk-container uk-container-small">
+        <div className="">
+          <div className="">
             <ReactMarkdown source={article.content}/>
             <p>
               <Moment format="MMM Do YYYY">{article.published_at}</Moment>

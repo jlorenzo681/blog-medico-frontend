@@ -8,7 +8,7 @@ const Articles = ({articles}) => {
   
   return (
     <div>
-      <div className="uk-child-width-1-2" data-uk-grid>
+      <div className="">
         <div>
           {leftArticles.map((article, i) => {
             return (
@@ -17,7 +17,7 @@ const Articles = ({articles}) => {
           })}
         </div>
         <div>
-          <div className="uk-child-width-1-2@m uk-grid-match" data-uk-grid>
+          <div className="">
             {rightArticles.map((article, i) => {
               return (
                 <Card article={article} key={`article__${article.node.id}`}/>

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "blog-medico-frontend",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jesus Lorenzo jlorenzo681@gmail.com>",
   "dependencies": {
     "bulma": "^0.9.0",
     "eslint": "^5.16.0",

@@ -25,4 +25,14 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
+$section-padding: 3rem 1.5rem !default
+$section-padding-medium: 9rem 1.5rem !default
+$section-padding-large: 18rem 1.5rem !default
+
+$footer-background-color: $primary !default
+$footer-color: false !default
+$footer-padding: 3rem 1.5rem 6rem !default
+
+$dimensions: 16 24 32 48 64 96 128 !default
+
 @import "~bulma/bulma.sass";
