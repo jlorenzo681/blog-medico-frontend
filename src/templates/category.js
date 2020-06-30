@@ -5,10 +5,6 @@ import ArticlesComponent from "../components/articles"
 import Layout from "../components/layout"
 import LeftMenu from "../components/leftMenu"
 
-const blogContentStyle = {
-  width: '70%'
-};
-
 export const query = graphql`
   query Category($id: Int!) {
     articles: allStrapiArticle(filter: { category: { id: { eq: $id } } }) {
@@ -41,7 +37,7 @@ const Category = ({data}) => {
         <LeftMenu/>
         <section className="section hero">
           <div className="hero-body">
-            <div className="" style={blogContentStyle}>
+            <div className="">
               <h1>{category}</h1>
               <ArticlesComponent articles={articles}/>
             </div>

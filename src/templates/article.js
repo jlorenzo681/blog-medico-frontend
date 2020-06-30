@@ -1,15 +1,12 @@
 import React from "react"
 import {graphql} from "gatsby"
+import Card from "../components/card"
 
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 
 import Layout from "../components/layout"
 import LeftMenu from "../components/leftMenu"
-
-const blogContentStyle = {
-  width: '70%'
-};
 
 export const query = graphql`
   query ArticleQuery($id: Int!) {
@@ -30,17 +27,11 @@ const Article = ({data}) => {
   return (
     <Layout>
       <LeftMenu/>
-      <div className="" style={blogContentStyle}>
-          <h1>{article.title}</h1>
-        <div className="">
-          <div className="">
-            <ReactMarkdown source={article.content}/>
-            <p>
-              <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-            </p>
-          </div>
+      <section className="section hero">
+        <div className="hero-body">
+          <Card article={article} key={article.id}/>
         </div>
-      </div>
+      </section>
     </Layout>
   )
 }

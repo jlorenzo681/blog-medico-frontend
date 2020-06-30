@@ -5,10 +5,6 @@ import ArticlesComponent from "../components/articles"
 import Layout from "../components/layout"
 import LeftMenu from "../components/leftMenu"
 
-const blogContentStyle = {
-  width: '70%'
-};
-
 const IndexPage = () => (
   <Layout>
     <StaticQuery
@@ -35,7 +31,7 @@ const IndexPage = () => (
           <LeftMenu/>
           <section className="section hero">
             <div className="hero-body">
-              <div className="" style={blogContentStyle}>
+              <div className="">
                 <h1>Todas</h1>
                 <ArticlesComponent articles={data.allStrapiArticle.edges}/>
               </div>

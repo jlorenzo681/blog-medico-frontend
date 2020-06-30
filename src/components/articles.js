@@ -1,5 +1,5 @@
 import React from "react"
-import Card from "./card"
+import CardList from "./cardList"
 
 const Articles = ({articles}) => {
   const leftArticlesCount = Math.ceil(articles.length / 5)
@@ -12,7 +12,7 @@ const Articles = ({articles}) => {
         <div>
           {leftArticles.map((article, i) => {
             return (
-              <Card article={article} key={`article__${article.node.id}`}/>
+              <CardList article={article.node} key={`article__${article.node.id}`}/>
             )
           })}
         </div>
@@ -20,7 +20,7 @@ const Articles = ({articles}) => {
           <div className="">
             {rightArticles.map((article, i) => {
               return (
-                <Card article={article} key={`article__${article.node.id}`}/>
+                <CardList article={article.node} key={`article__${article.node.id}`}/>
               )
             })}
           </div>
